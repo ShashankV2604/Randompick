@@ -17,7 +17,7 @@ h3 {
   margin: 50px 60px 50px 0px;
   text-align: center;
 }
-.container {
+#container {
   width: 500px;
 }
 textarea {
@@ -29,7 +29,7 @@ textarea {
     "Lucida Sans", Arial, sans-serif;
   padding: 15px;
 }
-.tag {
+#tags {
   background-color: orange;
   color: inherit;
   display: inline-block;
@@ -38,6 +38,6 @@ textarea {
   padding: 10px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-.tag.highlight {
+#highlight {
   background-color: green;
 }

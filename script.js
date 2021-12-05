@@ -1,6 +1,7 @@
 const tagsEl = document.getElementById('tags')
 const textarea = document.getElementById('textarea')
- textarea.focus()
+ textarea.focus() //auto cursor on text u can start typing directly
+ 
  textarea.addEventListener('keyup',(e) => {
       createtags(e.target.value)
       if(e.key === 'Enter'){
@@ -9,17 +10,20 @@ const textarea = document.getElementById('textarea')
            },10)
       }
  })
- function createtags(input){
-      const tags = input.split(',').filter(tag=> tag.trim() !== '').map(tag=> tag.trim())
-      tagsEl.innerHTML = ''
-      tags.forEach(tag => {
-       const tagsEl = document.getElementById('span')
-       tagsEl.classList.add('tag')
-       tagsEl.innerText =tag 
-       tagsEl.appendChild(tagEl)   
-      });
 
- }
+
+ function createtags(input){
+      const tags = input.split(',').filter(tag => tag.trim() !== '').map(tag=> tag.trim())
+      tagsEl.innerHTML = ''
+
+      tags.forEach(tag => {
+       const tagsEl = document.createElement('span')
+       tagEl.classList.add('tag')
+       tagEl.innerText =tag 
+       tagsEl.appendChild(tagEl)   
+      })
+
+     } 
  function randomselect(){
       const times = 30
       const interval = setInterval(()=>{
